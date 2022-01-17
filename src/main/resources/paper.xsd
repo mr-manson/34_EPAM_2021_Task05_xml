@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="papers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="type"/>
+              <xs:element type="xs:string" name="monthly"/>
+              <xs:element name="chars">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="color"/>
+                    <xs:element type="xs:integer" name="volum"/>
+                    <xs:element type="xs:string" name="glossy"/>
+                    <xs:element type="xs:integer" name="index"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:integer" name="id" use="required"/>
+            <xs:attribute type="xs:string" name="name" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
