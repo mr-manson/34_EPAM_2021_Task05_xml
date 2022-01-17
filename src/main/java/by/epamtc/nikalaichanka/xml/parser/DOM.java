@@ -64,7 +64,7 @@ public class DOM {
 
     private static String getElementText(Element element, String tag){
         NodeList nodeList = element.getElementsByTagName(tag);
-        Node node = nodeList.item(1);
+        Node node = nodeList.item(0);
         return node.getTextContent();
     }
 	
